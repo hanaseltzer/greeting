@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Push') {
             steps {
-                bat 'aws ecr get-login-password --region region | docker login --username AWS --password-stdin 025670723498.dkr.ecr.region.amazonaws.com'
+                bat 'aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 025670723498.dkr.ecr.region.amazonaws.com'
                 bat 'docker push 025670723498.dkr.ecr.us-east-1.amazonaws.com/hanna-demo/hello:%BUILD_ID%'
             }
         }
