@@ -4,6 +4,7 @@ pipeline {
         AWS_ACCESS_KEY_ID = credentials('025670723498')
         AWS_SECRET_ACCESS_KEY = credentials('025670723498') 
     }
+    
     stages {
         stage('Build') {
             steps {
